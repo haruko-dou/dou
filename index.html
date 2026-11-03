@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="fmdnvC8GUX48FBXQxhtotL"><head data-page-node-id="ebePADWFRfVmcYmB0iIN0J">
+<meta charset="utf-8" data-page-node-id="j2alEpvZZoHDWTmURiCztY">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="FlKkcqhHw4dXeGnoCAhDF4">
+<title data-page-node-id="vYHU0S60Biz1wRH4IPPmGr">乐天铺货店铺运营流程（简洁版）</title>
+<style data-page-node-id="7tMfbgCtKNQmxAUcOZsjlb">
+  :root{
+    --ink:#243040;
+    --ink-2:#4a5768;
+    --ink-3:#7c8899;
+
+    --line:#e4eaf1;
+    --line-soft:#eef3f8;
+    --row-alt:#fafcfe;
+    --row-hover:#f3f9fd;
+
+    --brand:#35618a;
+    --brand-2:#5b8fb9;
+    --brand-soft:#eef5fb;
+
+    --bg:#f1f4f8;
+    --card:#ffffff;
+
+    --radius:16px;
+  }
+
+  *{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    padding:34px 20px 56px;
+    background:var(--bg);
+    background-image:linear-gradient(180deg,#e9eff6 0%,rgba(241,244,248,0) 460px);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+    font-size:15px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-feature-settings:"kern" 1;
+  }
+
+  .page{
+    max-width:940px;
+    margin:0 auto;
+    padding:44px 48px 40px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 2px rgba(24,45,68,.04), 0 18px 40px -22px rgba(24,45,68,.28);
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* 顶部渐变装饰条 */
+  .page::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:4px;
+    background:linear-gradient(90deg,var(--brand) 0%,var(--brand-2) 55%,#a8cbe5 100%);
+  }
+
+  /* ---------- 页头 ---------- */
+  .hd{padding-bottom:22px;border-bottom:1px solid var(--line-soft);margin-bottom:6px}
+
+  h1{
+    font-size:26px;
+    line-height:1.35;
+    font-weight:700;
+    letter-spacing:-.3px;
+    margin:0 0 10px;
+    color:#1b2836;
+  }
+
+  .intro{
+    margin:0;
+    font-size:13.5px;
+    line-height:1.7;
+    color:var(--ink-3);
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .intro::before{
+    content:"";
+    flex:none;
+    width:5px;height:5px;
+    margin-top:9px;
+    border-radius:50%;
+    background:var(--brand-2);
+  }
+
+  /* ---------- 章节标题 ---------- */
+  h2{
+    font-size:17px;
+    font-weight:700;
+    line-height:1.5;
+    color:#21455f;
+    margin:38px 0 14px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    letter-spacing:.1px;
+  }
+  h2:first-of-type{margin-top:30px}
+
+  h2 .n{
+    flex:none;
+    width:26px;height:26px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    background:var(--brand-soft);
+    color:var(--brand);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0;
+  }
+
+  /* 标题右侧渐隐细线 */
+  h2::after{
+    content:"";
+    flex:1 1 auto;
+    height:1px;
+    margin-left:2px;
+    background:linear-gradient(90deg,var(--line) 0%,rgba(228,234,241,0) 100%);
+  }
+
+  /* ---------- 表格 ---------- */
+  .tbl{
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    background:#fff;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    line-height:1.75;
+  }
+
+  thead th{
+    background:linear-gradient(180deg,#f5f9fc 0%,#eef4fa 100%);
+    color:#33556f;
+    font-size:13px;
+    font-weight:650;
+    letter-spacing:.2px;
+    text-align:left;
+    padding:12px 16px;
+    border-bottom:1px solid #dde6ee;
+    white-space:nowrap;
+  }
+
+  tbody td{
+    padding:13px 16px;
+    color:var(--ink-2);
+    vertical-align:top;
+    border-bottom:1px solid var(--line-soft);
+  }
+
+  tbody tr:last-child td{border-bottom:none}
+
+  tbody tr:nth-child(even) td{background:var(--row-alt)}
+
+  tbody tr:hover td{background:var(--row-hover);transition:background .15s ease}
+
+  td:first-child{
+    color:#1f3345;
+    font-weight:650;
+    white-space:nowrap;
+  }
+
+  /* ---------- 列表 ---------- */
+  ul.list{
+    list-style:none;
+    margin:6px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  ul.list li{
+    position:relative;
+    padding:0 0 0 20px;
+    color:var(--ink-2);
+    line-height:1.85;
+  }
+
+  ul.list li::before{
+    content:"";
+    position:absolute;
+    left:2px; top:11px;
+    width:6px;height:6px;
+    border-radius:2px;
+    background:var(--brand-2);
+    transform:rotate(45deg);
+  }
+
+  strong{color:#1f3345;font-weight:650}
+
+  /* ---------- 页脚提示 ---------- */
+  .footer{
+    margin:34px 0 0;
+    padding:15px 18px;
+    background:#fbfaf7;
+    border:1px solid #efe8da;
+    border-left:3px solid #d9b878;
+    border-radius:8px;
+    font-size:12.5px;
+    line-height:1.8;
+    color:#6e6552;
+  }
+  .footer strong{color:#5d5140}
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:720px){
+    body{padding:0;font-size:14.5px}
+    .page{
+      margin:0;
+      padding:26px 18px 30px;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
+    }
+    h1{font-size:21px}
+    h2{font-size:16px;margin-top:30px}
+    table{font-size:13px;min-width:540px}
+    thead th,tbody td{padding:10px 12px}
+    td:first-child{white-space:normal}
+  }
+
+  /* ---------- 打印 ---------- */
+  @media print{
+    @page{margin:14mm 12mm}
+    body{
+      background:#fff;
+      padding:0;
+      font-size:11.5pt;
+      line-height:1.65;
+      color:#000;
+      -webkit-print-color-adjust:exact;
+      print-color-adjust:exact;
+    }
+    .page{
+      max-width:none;
+      margin:0;
+      padding:0;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
+      overflow:visible;
+    }
+    .page::before{display:none}
+    h1{font-size:19pt}
+    h2{font-size:13pt;margin:18pt 0 8pt;break-after:avoid;page-break-after:avoid}
+    h2 .n{background:#eee;color:#333}
+    h2::after{display:none}
+    .tbl{border:1px solid #bbb;border-radius:0;overflow:visible}
+    table{font-size:10.5pt;min-width:0}
+    thead{display:table-header-group}
+    thead th{background:#f0f0f0 !important;color:#000;border-bottom:1px solid #bbb;padding:7px 9px}
+    tbody td{padding:7px 9px;border-bottom:1px solid #ddd}
+    tbody tr{break-inside:avoid;page-break-inside:avoid}
+    tbody tr:nth-child(even) td{background:#fafafa !important}
+    tbody tr:hover td{background:transparent !important}
+    ul.list{gap:6pt}
+    ul.list li::before{background:#666}
+    .footer{background:#f7f7f7;border:1px solid #ccc;border-left:3px solid #999;color:#333}
+  }
+</style>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body data-page-node-id="AgMlgt54sHOZDzSYy7Cafc" style="position: relative;">
+<main class="page" data-page-node-id="iAaO2EdwcgDh0U2IQsmT5Z">
+
+<header class="hd" data-page-node-id="IpXErTCN9aiGscCtj321tw">
+  <h1 data-page-node-id="OvQJ3wFfsDmaCdXBaBwHBK">乐天铺货店铺运营流程</h1>
+  
+</header>
+
+<h2 data-page-node-id="CvHLrhLW58QTKUHHGsS7XO"><span class="n" data-page-node-id="G2FGed9R1FvjIUEpytBeK5">一</span>每日工作</h2>
+<div class="tbl" data-page-node-id="mYizfl6PAOfMuGHzg1h6JS">
+<table data-page-node-id="ZhvD67JtyxqGszq1CFaTa9">
+<thead data-page-node-id="pBmzPKvvuOFSKopNfuMKEU"><tr data-page-node-id="GGTdUcU85y1iIloPIixZAy"><th style="width:20%" data-page-node-id="JeUB7eV7HMO8N2dLEdRVNN">任务</th><th style="width:19%" data-page-node-id="aXKW8SOvaSzlvqQXQvC3Ok">要求</th><th data-page-node-id="p9nffPnIOzYgmbOHXwlUpX">执行要点</th></tr></thead>
+<tbody data-page-node-id="XUhcjHgK24O24Vo1uz7kUh">
+<tr data-page-node-id="cMIczMFalRq9ACGhNrZulS"><td data-page-node-id="eOivAQHFVjOAUKGK3H2FpR">后台数据</td><td data-page-node-id="LvQyTHQX1kY25T0XaMu5jE">每日约15分钟</td><td data-page-node-id="SX0XKUmy2QZkl9bMpj2ulZ">查看访问量、转化率、订单、新评价；较前一天或上周同期波动超过20%，及时反馈和调整。</td></tr>
+<tr data-page-node-id="Po8nylD3KUEbl1SILVG97a"><td data-page-node-id="VQ0QnZtASk5l9ruwYfhnb9">新品上架</td><td data-page-node-id="aLe3fm2KYoqizjTOxBFXgG">每周≥900个/店</td><td data-page-node-id="C2iqvk929FWvx3PyFylIV7">按日分配，批量上架；当日记录刊登失败原因（类目、图片、必填项、CSV等）。</td></tr>
+<tr data-page-node-id="u7p9xBG1JIdX2Ipj9oMgNS"><td data-page-node-id="cdRhujo9nIQGTCyhFG7jzc">精品上架</td><td data-page-node-id="4RePG39tZeUkjEVLDHCobd">每周≥6个/店</td><td data-page-node-id="4QWlJHMmFntD0AH2RXNFme">手动完善标题、主图、卖点、尺码表及属性；记录选品理由，上架一周后复盘。</td></tr>
+<tr data-page-node-id="9EUUt5vIMbRMRnvK5zEOfc"><td data-page-node-id="pYrynHYDpeigHiFSO73JDE">链接优化</td><td data-page-node-id="xDzNDL4oiZEaoxaTA7QHB4">每日≥5条/店</td><td data-page-node-id="HQC8nzy9OYyJRwbA9touMP">优先处理“有访问、无转化”商品；每次尽量只调整一个变量，并记录修改内容及效果。</td></tr>
+<tr data-page-node-id="LjoZue6mFCCsgAxe9cpeiR"><td data-page-node-id="lPYxPucoo7ubaUXQYoqRpV">售后与评价</td><td data-page-node-id="2MF9M24ITS2vogOSRhzTOn">每日处理</td><td data-page-node-id="Q8shudoJ3xL1DYIxCBkru5">及时回复咨询与差评；记录问题原因、责任环节及改进措施，避免重复发生。</td></tr>
+<tr data-page-node-id="ywcXvbTsCKRfwByczOnrHL"><td data-page-node-id="560CYcFF2XRWeGZbQXI3Hl">数据登记</td><td data-page-node-id="PTt2ptx395GChwL3Ao4Vta">每日完成</td><td data-page-node-id="niZv6FSph8wAkxsYEVrX3T">将访问量、订单量等数据录入每日数据追踪表。</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 data-page-node-id="wNMskrjAszrlCMdclqolwv"><span class="n" data-page-node-id="uYBrRHJiRU5hYeuHHRcsrF">二</span>每周工作</h2>
+<div class="tbl" data-page-node-id="HMx2qBoxBTjceUY0YIwnLF">
+<table data-page-node-id="hpvoOLDpAr7br1eFrskpz6">
+<thead data-page-node-id="xRZq3vRWiHl1cH8XKbySb5"><tr data-page-node-id="MRPXQDEiRX0qa50mz8DnCh"><th style="width:27%" data-page-node-id="mEg7Yl14tujiubWDEinxyw">任务</th><th data-page-node-id="cIR2xfBNelMRA7EH2FCkDl">执行要求</th></tr></thead>
+<tbody data-page-node-id="ar8ZWHzeqitTlXjbOkU6YA">
+<tr data-page-node-id="8WlSC1lu5VPQk4GPp0wspo"><td data-page-node-id="1LzMNukBqt1kwRTTDva9EK">清理零访问商品</td><td data-page-node-id="kSEs7UG2UeO83JEYm2FOoO">每周一次；删除上架超过1个月且访问量为0的商品。</td></tr>
+<tr data-page-node-id="zqJEG4oiAjn5wV2NfxgjEQ"><td data-page-node-id="IaPIrtKFSGCHy7VdwjpaQy">合规自查</td><td data-page-node-id="fz8TI2Doznbu4jszoaDmPW">每周至少一次，周五18:00前完成；发现高风险商品立即下架并同步团队。</td></tr>
+<tr data-page-node-id="kB36elWxzWmEx7zQEKsJ86"><td data-page-node-id="S0PhMXirsh5DJVqOVjvint">TOP10商品复盘</td><td data-page-node-id="JpFDk3KKnC5Q7JPee44f6p">每店每周一次，对比订单量、转化率和排名。</td></tr>
+<tr data-page-node-id="0nzxH2DW53JF8OsTijBsKB"><td data-page-node-id="ClLHhXjrrpwXI9hbGVkE2D">工作量核对</td><td data-page-node-id="Yi8AN5FXs9wKOQMpmxTcqD">汇总新品、精品、链接优化完成数量；未达标项说明原因。</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 data-page-node-id="uAPBYolBQzoFnHaKxHQb2W"><span class="n" data-page-node-id="6J87NbRq9SUbe4WYh8PmGY">三</span>活动执行</h2>
+<div class="tbl" data-page-node-id="khrER7sfY27V6u1oOWJvKq">
+<table data-page-node-id="wAabtEufO8S2KzG7L5pkzN">
+<thead data-page-node-id="vgCcW9U8KoOQ0dtR6FCOKO"><tr data-page-node-id="XgLMolEpEft2kFslOWUBli"><th style="width:23%" data-page-node-id="yMFRnOxBQcSGxxbmaebX5k">项目</th><th data-page-node-id="tQ28D70Fb8eca6zWAPosJI">执行规范</th></tr></thead>
+<tbody data-page-node-id="DXA84UNrBnXeOclSArQ3h6">
+<tr data-page-node-id="Fza7X4cHQ3gtMcKV1bjzKK"><td data-page-node-id="7Cud00ZU1P5vfE0eF35YeD">Banner</td><td data-page-node-id="vkg1nAk9yGszL2gAD9nMjA">大促前2周定稿，前3天替换；明确活动内容、优惠力度、截止时间和跳转位置；结束后24小时内撤下。</td></tr>
+<tr data-page-node-id="xzPmNn67hjNgeP84Z42Axt"><td data-page-node-id="B2xkcj6kIHcxylEcsPQ4Sh">积分活动</td><td data-page-node-id="EA0IQLDaFOxmgqFDJUNu1M">优先安排高毛利、有库存、转化稳定的商品；核算积分、广告、运费等成本，活动后复盘实际毛利。</td></tr>
+<tr data-page-node-id="LehFcZLBx8r8HJmtIxHtbs"><td data-page-node-id="XcXlQq7qebVRHZ8zfUlirz">优惠券</td><td data-page-node-id="92tzvcjimCuqjboQrRTHzR">设置使用门槛及有效期；控制优惠力度，记录领用率、核销率及订单、毛利变化。</td></tr>
+<tr data-page-node-id="tHbJGaV2nuOpZZoV5S3ply"><td data-page-node-id="mwgUGrN2LevGUpImwEua00">广告</td><td data-page-node-id="uRDLCp2Upk0KCS1vs7L7GY">活动前核对配置，活动中关注转化与成本，活动结束后复盘效果。</td></tr>
+<tr data-page-node-id="v1IFw3eaX1MA2HmOibnGKz"><td data-page-node-id="MOCL3YAn32takymBBO5zZy">标题活动词</td><td data-page-node-id="nQT8vjIGWPzAsa16A7EIzX">仅对实际参加活动的商品添加对应信息；结束后及时恢复，禁止虚假或夸大宣传。</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 data-page-node-id="gIvNgvKArCEpnTYkRIjXiq"><span class="n" data-page-node-id="3FjazSwz1JUYuZbRU2CqAj">四</span>售后与合规</h2>
+<ul class="list" data-page-node-id="nw1LkoxrxflK2ljHmNn1D9">
+<li data-page-node-id="uk3PoiBdw7W7PDIl9xWKeH" style=""><strong data-page-node-id="Ui2NoclwdF4kWvWvXAarMN">售后归因：</strong>咨询、差评、取消、退款统一记录“问题—原因—责任环节—改进措施”；责任环节可对应选品/供应商、页面、拣货、质检、物流、顾客下单等。一定要提出解决方案</li>
+<li data-page-node-id="PNcClXR9vgarxjDDNvH9bk" style=""><strong data-page-node-id="1lJf3Eyl9Y7AObVBXrO08m">重复问题：</strong>同一原因出现≥3次，立即整改并明确完成时间。</li>
+<li data-page-node-id="xT0mrlxYHAHi97C8kgEUZN"><strong data-page-node-id="lpwDB38bwCV130bp8GH0VI">侵权与认证：</strong>重点排查品牌、图片、专利/外观侵权，禁售品，以及PSE、技适和相关商品合规标识。</li>
+<li data-page-node-id="4qZTeeremZHsFsmK2vFJjI"><strong data-page-node-id="lxvv6GyNTaETWHqlFaqYKj">刊登与宣传：</strong>同款多色多尺码优先使用规格选项，避免重复刊登；不得使用无依据的绝对化宣传，标题活动信息必须真实。</li>
+</ul>
+
+
+
+</main>
+
+
+</body></html>
